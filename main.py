@@ -19,7 +19,7 @@ async def main(module):
         if len(key_pair) == 2:
             key, address = key_pair
         else:
-            key, address = key_pair, None
+            key, address = *key_pair, None
         account = Account(key, id=id+1, address_to=address)
         match module:
             case 'claim':

@@ -28,7 +28,7 @@ class Account:
         self.account = self.w3.eth.account.from_key(key)
         self.address = self.account.address
         self.address_to = address_to
-        self.acc_info = f'{id}) {self.address_to}'
+        self.acc_info = f'{id}) {self.address}'
         self.contract = self.get_contract(address=Web3.to_checksum_address(address), abi=abi)
 
     def get_contract(self, address, abi) -> AsyncContract:

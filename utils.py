@@ -129,7 +129,7 @@ class Account:
                 return
 
             message = f"Claiming Aevo Airdrop {self.address}"
-            sign = self.account.sign_message(encode_defunct(hexstr=to_hex(keccak(message.encode('utf-8')))))
+            sign = self.account.sign_message(encode_defunct(text=message))
             params = {
                 'address': self.address,
                 'message': message,
